@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="csscode.css" />
+    <title>Heat transfer coefficient app</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="header">
+            <div id="logo">
+                <p id="logo-text">Heat transfer coefficient</p>
+            </div>
+
+        </div>
+
+        <div>
+            <div id="box-calc">
+
+                <div id="rsi-rse">
+                    <div id="rsi-div">
+                        <input type="number" placeholder="input Rsi" id="rsi" />
+                    </div>
+                    <div id="rse-div">
+                        <input type="number" placeholder="input Rse" id="rse" />
+                    </div>
+                </div>
+
+
+                <div id="input-values-1">
+                    <input type="text" id="material-1" placeholder="input material" />
+                    <input type="number" id="thickness-1" placeholder="input thickness" />
+                    <input type="number" id="lambda-1" placeholder="input lambda" />
+                    <input type="number" id="resistance-1" class="resistance" />
+                </div>
+
+                <div id="input-values-2">
+                    <input type="text" id="material-2" placeholder="input material" />
+                    <input type="number" id="thickness-2" placeholder="input thickness" />
+                    <input type="number" id="lambda-2" placeholder="input lambda" />
+                    <input type="number" id="resistance-2" class="resistance" />
+                </div>
+
+            </div>
+
+            <div id="box-nav">
+                <div>
+                    <button id="row-numbers">row numbers</button>
+                </div>
+
+                <div>
+                    <button id="compute-resistance">compute-resistance</button>
+                </div>
+
+                <div>
+                    <button id="compute-hrc">compute-H.R.T</button>
+                </div>
+
+                <div>
+                    <p id="resistance-score"></p>
+                </div>
+
+                <div>
+                    <p id="htc-score"></p>
+                </div>
+
+
+            </div>
+
+            <div style="clear: both;"></div>
+        </div>
+        <div id="footer">footer</div>
+    </div>
+
+    <script type="text/javascript" src="jscode.js"></script>
+</body>
+
+</html>

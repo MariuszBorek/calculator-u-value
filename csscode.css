@@ -1,0 +1,93 @@
+body {
+    background-color: #26282E;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    width: 900px;
+    background-color: #209781;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div {
+    background-color: #209781;
+}
+
+
+/* ----------header---------- */
+
+#header {
+    height: 90px;
+}
+
+#logo {}
+
+#logo-text {
+    font-size: 30px;
+}
+
+
+/* ----------box-calc---------- */
+
+#box-calc {
+    float: left;
+    width: 505px;
+    min-height: 300px;
+    padding: 5px;
+}
+
+#rsi-rse {
+    margin-left: 373px;
+}
+
+input[type="text"] {
+    width: 120px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+input[type="number"] {
+    width: 120px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.resistance {
+    background-color: rgb(184, 184, 184);
+}
+
+
+/* ----------box-nav---------- */
+
+#box-nav {
+    float: left;
+    min-height: 300px;
+    width: 395px;
+    padding: 5px;
+}
+
+button {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #156658;
+    background-color: #36bea5;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #209781;
+}
+
+
+/* ----------footer---------- */
+
+#footer {
+    min-height: 90px;
+}
