@@ -1,50 +1,63 @@
+var actualRowNumber = 0;
+
+function rowNumber() {
+    actualRowNumber = actualRowNumber + 1;
+    console.log(actualRowNumber);
+
+}
+
+function addRow() {
+
+    var rowBox = document.getElementById('row-box');
+    var div = document.createElement('div');
+    rowBox.appendChild(div);
+    div.id = 'input-values-' + actualRowNumber;
+    div.innerHTML = '<input type="text" id="material' + actualRowNumber + '" placeholder="input material" /><input type="number" id="thickness-' + actualRowNumber + '" placeholder="input thickness" /><input type="number" id="lambda-' + actualRowNumber + '" placeholder="input lambda-' + actualRowNumber + '" /><input type="number" id="resistance-' + actualRowNumber + '" class="resistance" />';
+    rowNumber();
+}
+
+
+var rowNumberButton = document.getElementById('row-numbers');
+rowNumberButton.addEventListener('click', addRow);
+
+// -----------
+
 function computeResistance() {
-    var thickness1 = document.getElementById('thickness-1').value;
-    var lambda1 = document.getElementById('lambda-1').value;
 
-    var thickness2 = document.getElementById('thickness-2').value;
-    var lambda2 = document.getElementById('lambda-2').value;
-    console.log(thickness1);
-    console.log(thickness2);
-    console.log(lambda1);
-    console.log(lambda2);
+    for (i = 0; i < actualRowNumber; i++) {
 
-    var score1 = Number.parseFloat(thickness1) / Number.parseFloat(lambda1);
-    var score2 = Number.parseFloat(thickness2) / Number.parseFloat(lambda2);
+        var thickness = document.getElementById('thickness-' + i + '').value;
+        var lambda = document.getElementById('lambda-' + i + '').value;
 
-    // console.log(score1);
-    // console.log(score2);
+        console.log(thickness);
+        console.log(lambda);
 
-    var placeToPrintResistace1 = document.getElementById('resistance-1');
-    console.log(placeToPrintResistace1);
-    placeToPrintResistace1.value = score1;
-
-    var placeToPrintResistace2 = document.getElementById('resistance-2');
-    console.log(placeToPrintResistace2);
-    placeToPrintResistace2.value = score2;
-
-
+        var placeToPrintResistace = document.getElementById('resistance-' + i + '');
+        console.log(placeToPrintResistace);
+        placeToPrintResistace.value = Number.parseFloat(thickness) / Number.parseFloat(lambda);
+    }
 }
 
 var computeResistanceButton = document.getElementById('compute-resistance');
 computeResistanceButton.addEventListener('click', computeResistance);
 
-
+// -----------
 
 function computeHTC() {
-    var inputRsi = document.getElementById('rsi').value;
-    var inputRse = document.getElementById('rse').value;
-    var inputR1 = document.getElementById('resistance-1').value;
-    var inputR2 = document.getElementById('resistance-2').value;
+    var rsi = document.getElementById('rsi').value;
+    var rse = document.getElementById('rse').value;
+    var resistanceSum = 0;
 
-    var score = 1 / (Number.parseFloat(inputRsi) +
-        Number.parseFloat(inputRse) +
-        Number.parseFloat(inputR1) +
-        Number.parseFloat(inputR2));
+    for (i = 0; i < actualRowNumber; i++) {
+        resistanceSum += Number.parseFloat(document.getElementById('resistance-' + i + '').value);
+
+    }
+
+    var htc = Number.parseFloat(rsi) + Number.parseFloat(rse) + Number.parseFloat(resistanceSum);
 
     var placeToPrintHtc = document.getElementById('htc-score');
-    placeToPrintHtc.innerHTML = 'HTC = ' + score;
-    console.log('HTC', score);
+    placeToPrintHtc.innerHTML = 'HTC = ' + htc;
+    console.log('HTC', htc);
 }
 
 var computeHtcButton = document.getElementById('compute-hrc');
