@@ -6,6 +6,7 @@ function rowNumber() {
 
 }
 
+
 function addRow() {
 
     var rowBox = document.getElementById('row-box');
@@ -15,7 +16,6 @@ function addRow() {
     div.innerHTML = '<input type="text" id="material' + actualRowNumber + '" placeholder="input material" /><input type="number" id="thickness-' + actualRowNumber + '" placeholder="input thickness" /><input type="number" id="lambda-' + actualRowNumber + '" placeholder="input lambda-' + actualRowNumber + '" /><input type="number" id="resistance-' + actualRowNumber + '" class="resistance" />';
     rowNumber();
 }
-
 
 var rowNumberButton = document.getElementById('row-numbers');
 rowNumberButton.addEventListener('click', addRow);
@@ -62,3 +62,5 @@ function computeHTC() {
 
 var computeHtcButton = document.getElementById('compute-hrc');
 computeHtcButton.addEventListener('click', computeHTC);
+
+window.onload = addRow();

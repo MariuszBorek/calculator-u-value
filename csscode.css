@@ -10,13 +10,14 @@ body {
 
 #container {
     width: 900px;
-    background-color: #209781;
+    border: 2px solid;
+    background-color: #26282E;
     margin-left: auto;
     margin-right: auto;
 }
 
 div {
-    background-color: #209781;
+    background-color: #26282E;
 }
 
 
@@ -24,12 +25,13 @@ div {
 
 #header {
     height: 90px;
+    padding-left: 5px;
+    border-bottom: 2px dashed white;
+    margin-bottom: 10px;
 }
 
-#logo {}
-
 #logo-text {
-    font-size: 30px;
+    font-size: 35px;
 }
 
 
@@ -37,29 +39,34 @@ div {
 
 #box-calc {
     float: left;
-    width: 505px;
+    width: 508px;
     min-height: 300px;
     padding: 5px;
+    border-right: 2px dashed white;
+}
+
+#block-1 {
+    width: 372px;
+    float: left;
+    color: #26282E;
 }
 
 #rsi-rse {
-    margin-left: 373px;
+    float: left;
 }
 
 input[type="text"] {
     width: 120px;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin: 2px;
+    /* margin-top: 2px;
+    margin-bottom: 2px; */
 }
 
 input[type="number"] {
     width: 120px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
-.resistance {
-    background-color: rgb(184, 184, 184);
+    margin: 2px;
+    /* margin-top: 2px;
+    margin-bottom: 2px; */
 }
 
 
@@ -68,21 +75,36 @@ input[type="number"] {
 #box-nav {
     float: left;
     min-height: 300px;
-    width: 395px;
-    padding: 5px;
+    width: 385px;
+    padding-top: 5px;
+    padding-left: 8px;
+    background-color: #26282E;
 }
 
-button {
+button,
+#check-wt {
     width: 200px;
     height: 30px;
-    border: 1px solid #156658;
-    background-color: #36bea5;
-    margin-bottom: 3px;
+    border: 2px solid white;
+    background-color: #26282E;
+    color: white;
+    margin-top: 2px;
+    margin-bottom: 5px;
     cursor: pointer;
+    font-size: 15px;
 }
 
-button:hover {
-    background-color: #209781;
+button:hover,
+#check-wt:hover {
+    background-color: #37393F;
+}
+
+#check-wt a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 3px;
 }
 
 
@@ -90,4 +112,7 @@ button:hover {
 
 #footer {
     min-height: 90px;
+    border-top: 2px dashed white;
+    margin-top: 10px;
+    padding: 5px;
 }
