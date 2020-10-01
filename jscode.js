@@ -14,7 +14,7 @@ function addRow() {
     var div = document.createElement('div');
     rowBox.appendChild(div);
     div.id = 'input-values-' + actualRowNumber;
-    div.innerHTML = '<input type="text" id="material' + actualRowNumber + '" placeholder="input material" /><input type="number" id="thickness-' + actualRowNumber + '" placeholder="input thickness" /><input type="number" id="lambda-' + actualRowNumber + '" placeholder="input lambda-' + actualRowNumber + '" /><input type="number" id="resistance-' + actualRowNumber + '" class="resistance" />';
+    div.innerHTML = '<input type="text" id="material' + actualRowNumber + '" placeholder="material(optional)" /><input type="number" id="thickness-' + actualRowNumber + '" placeholder="input thickness" /><input type="number" id="lambda-' + actualRowNumber + '" placeholder="input lambda" /><input type="number" placeholder="R' + (actualRowNumber + 1) + '(optional)" id="resistance-' + actualRowNumber + '" class="resistance" />';
     rowNumberAdd();
 }
 
@@ -67,7 +67,7 @@ function computeUvalue() {
 
     var placeToPrintHtc = document.getElementById('display-info');
     if (isNaN(uValue)) {
-        placeToPrintHtc.innerHTML = 'fill all required fields or subtract rows';
+        placeToPrintHtc.innerHTML = 'Fill all required fields or subtract not necessarily rows';
     } else {
         placeToPrintHtc.innerHTML = 'U value = ' + uValue;
     }

@@ -40,7 +40,7 @@ div {
 #box-calc {
     float: left;
     width: 508px;
-    min-height: 420px;
+    min-height: 440px;
     padding: 5px;
     border-right: 2px dashed white;
 }
@@ -107,6 +107,7 @@ button:hover,
 
 #display {
     width: 372px;
+    height: 85px;
     padding: 5px;
     background-color: #37393F;
     border: 1px solid white;
@@ -136,8 +137,12 @@ table {
     min-height: 90px;
     border-top: 2px dashed white;
     margin-top: 10px;
+    padding-left: 5px;
+    font-size: 10px;
+}
+
+#text-in-footer {
     text-align: right;
     padding-right: 5px;
-    padding-top: 70px;
     font-size: 10px;
 }
