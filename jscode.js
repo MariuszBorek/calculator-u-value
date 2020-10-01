@@ -1,3 +1,10 @@
+function start() {
+    addRow();
+    document.getElementById('table-rsi-rse').style.display = 'none';
+}
+
+window.onload = start();
+
 var actualRowNumber = 0;
 
 function rowNumber() {
@@ -8,7 +15,6 @@ function rowNumber() {
 
 
 function addRow() {
-
     var rowBox = document.getElementById('row-box');
     var div = document.createElement('div');
     rowBox.appendChild(div);
@@ -53,14 +59,23 @@ function computeHTC() {
 
     }
 
-    var htc = Number.parseFloat(rsi) + Number.parseFloat(rse) + Number.parseFloat(resistanceSum);
+    var uValue = 1 / (Number.parseFloat(rsi) + Number.parseFloat(rse) + Number.parseFloat(resistanceSum));
 
     var placeToPrintHtc = document.getElementById('htc-score');
-    placeToPrintHtc.innerHTML = 'HTC = ' + htc;
-    console.log('HTC', htc);
+    placeToPrintHtc.innerHTML = 'U value = ' + uValue;
 }
 
 var computeHtcButton = document.getElementById('compute-hrc');
 computeHtcButton.addEventListener('click', computeHTC);
 
-window.onload = addRow();
+function showTable() {
+    var table = document.getElementById('table-rsi-rse');
+    if (table.style.display === 'none') {
+        table.style.display = 'block';
+    } else {
+        table.style.display = 'none';
+    }
+}
+
+var showRsiRseButton = document.getElementById('show-rsi-rse-table');
+showRsiRseButton.addEventListener('click', showTable);

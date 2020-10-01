@@ -14,7 +14,7 @@
 
         <div id="header">
             <div id="logo">
-                <p id="logo-text">Heat transfer coefficient</p>
+                <p id="logo-text">U value</p>
             </div>
 
         </div>
@@ -50,7 +50,11 @@
                 </div>
 
                 <div>
-                    <button id="compute-hrc">COMPUTE H.T.C</button>
+                    <button id="compute-hrc">COMPUTE U-VALUE</button>
+                </div>
+
+                <div>
+                    <button id="show-rsi-rse-table">SHOW/HIDE RSI/RSE TABLE</button>
                 </div>
 
                 <div id="check-wt">
@@ -62,12 +66,37 @@
                 </div>
 
                 <div>
-                    <p id="htc-score"></p>
+                    <p id="htc-score">U value = ...</p>
+                </div>
+                <div id="table-rsi-rse">
+                    <table>
+                        <tr>
+                            <th>direction of heat flow</th>
+                            <th>Rsi</th>
+                            <th>Rse</th>
+                        </tr>
+                        <tr>
+                            <td>horizontal</td>
+                            <td>0.13</td>
+                            <td>0.4</td>
+                        </tr>
+                        <tr>
+                            <td>upwards</td>
+                            <td>0.10</td>
+                            <td>0.4</td>
+                        </tr>
+                        <tr>
+                            <td>downwards</td>
+                            <td>0.17</td>
+                            <td>0.4</td>
+                        </tr>
+                    </table>
                 </div>
 
             </div>
 
             <div style="clear: both;"></div>
+
         </div>
         <div id="footer">
             <div id="text-in-footer"></div>

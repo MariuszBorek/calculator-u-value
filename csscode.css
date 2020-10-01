@@ -40,7 +40,7 @@ div {
 #box-calc {
     float: left;
     width: 508px;
-    min-height: 300px;
+    min-height: 338px;
     padding: 5px;
     border-right: 2px dashed white;
 }
@@ -83,9 +83,9 @@ input[type="number"] {
 
 button,
 #check-wt {
-    width: 200px;
+    width: 250px;
     height: 30px;
-    border: 2px solid white;
+    border: 1px solid white;
     background-color: #26282E;
     color: white;
     margin-top: 2px;
@@ -105,6 +105,22 @@ button:hover,
     display: block;
     text-align: center;
     margin-top: 3px;
+}
+
+th {
+    text-align: left;
+    background-color: #37393F;
+    border-bottom: 1px solid white;
+}
+
+td {
+    border-bottom: 1px solid white;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid white;
+    min-width: 372px;
 }
 
 
