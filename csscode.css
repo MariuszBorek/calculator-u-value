@@ -40,7 +40,7 @@ div {
 #box-calc {
     float: left;
     width: 508px;
-    min-height: 338px;
+    min-height: 420px;
     padding: 5px;
     border-right: 2px dashed white;
 }
@@ -58,15 +58,12 @@ div {
 input[type="text"] {
     width: 120px;
     margin: 2px;
-    /* margin-top: 2px;
-    margin-bottom: 2px; */
 }
 
 input[type="number"] {
     width: 120px;
     margin: 2px;
-    /* margin-top: 2px;
-    margin-bottom: 2px; */
+    outline: none;
 }
 
 
@@ -83,7 +80,7 @@ input[type="number"] {
 
 button,
 #check-wt {
-    width: 250px;
+    width: 372px;
     height: 30px;
     border: 1px solid white;
     background-color: #26282E;
@@ -92,6 +89,7 @@ button,
     margin-bottom: 5px;
     cursor: pointer;
     font-size: 15px;
+    outline: none;
 }
 
 button:hover,
@@ -107,6 +105,13 @@ button:hover,
     margin-top: 3px;
 }
 
+#display {
+    width: 372px;
+    padding: 5px;
+    background-color: #37393F;
+    border: 1px solid white;
+}
+
 th {
     text-align: left;
     background-color: #37393F;
@@ -118,6 +123,7 @@ td {
 }
 
 table {
+    margin-top: 17px;
     border-collapse: collapse;
     border: 1px solid white;
     min-width: 372px;
@@ -130,5 +136,8 @@ table {
     min-height: 90px;
     border-top: 2px dashed white;
     margin-top: 10px;
-    padding: 5px;
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 70px;
+    font-size: 10px;
 }
